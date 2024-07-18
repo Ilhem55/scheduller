@@ -1,3 +1,4 @@
+import { adapterFactory } from 'angular-calendar/date-adapters/date-fns';
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
@@ -10,7 +11,15 @@ import { RegisterComponent } from './pages/register/register.component';
 import { ActivateAccountComponent } from './pages/activate-account/activate-account.component';
 import { CodeInputModule } from 'angular-code-input';
 import { SchedulerComponent } from './pages/scheduler/scheduler.component';
-import { ScheduleModule } from '@syncfusion/ej2-angular-schedule';
+import { CalendarModule, DateAdapter } from 'angular-calendar';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { FlatpickrModule } from 'angularx-flatpickr';
+import { NgbModalModule } from '@ng-bootstrap/ng-bootstrap';
+
+
+
+
+
 
 
 
@@ -32,16 +41,21 @@ import { ScheduleModule } from '@syncfusion/ej2-angular-schedule';
     HttpClientModule,
     FormsModule,
     CodeInputModule,
-    
-    ScheduleModule
-
-    
+    BrowserAnimationsModule,
 
 
-    
-  
+
+    NgbModalModule,
+
+    FlatpickrModule.forRoot(),
+    CalendarModule.forRoot({
+      provide: DateAdapter,
+      useFactory: adapterFactory,
+    }),
   ],
-  providers: [HttpClient],
+  providers: [
+    HttpClient,
+ ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

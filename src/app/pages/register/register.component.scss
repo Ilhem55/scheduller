@@ -1,0 +1,11 @@
+// styles.scss (ou register.component.scss)
+
+// Ajout de styles pour les classes is-valid et is-invalid
+.is-valid {
+    border: 1px solid #28a745 !important; // Bord vert pour champ valide
+  }
+  
+  .is-invalid {
+    border: 1px solid #dc3545 !important; // Bord rouge pour champ invalide
+  }
+  

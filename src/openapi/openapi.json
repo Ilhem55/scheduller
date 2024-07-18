@@ -413,17 +413,17 @@
             "TaskRequest": {
                 "type": "object",
                 "properties": {
-                    "title": {
+                    "subject": {
                         "type": "string"
                     },
                     "description": {
                         "type": "string"
                     },
-                    "startDate": {
+                    "startTime": {
                         "type": "string",
                         "format": "date"
                     },
-                    "endDate": {
+                    "endTime": {
                         "type": "string",
                         "format": "date"
                     }
@@ -486,17 +486,17 @@
                         "type": "integer",
                         "format": "int32"
                     },
-                    "title": {
+                    "subject": {
                         "type": "string"
                     },
                     "description": {
                         "type": "string"
                     },
-                    "startDate": {
+                    "startTime": {
                         "type": "string",
                         "format": "date"
                     },
-                    "endDate": {
+                    "endTime": {
                         "type": "string",
                         "format": "date"
                     }

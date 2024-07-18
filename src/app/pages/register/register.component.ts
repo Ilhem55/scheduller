@@ -9,7 +9,13 @@ import { Router } from '@angular/router';
   styleUrls: ['./register.component.scss']
 })
 export class RegisterComponent {
-  registerRequest: RegistrationRequest = {email: '', firstname: '', lastname: '', password: ''};
+  registerRequest: RegistrationRequest = {
+    email: '',
+    firstname: '',
+    lastname: '',
+    password: '',
+    confirmPassword: ''
+  };
   errorMsg: Array<string> = [];
 
   constructor(
@@ -25,6 +31,13 @@ export class RegisterComponent {
   register() {
     this.errorMsg = []; // Initialiser errorMsg comme un tableau vide
 
+    // Vérifier si les mots de passe correspondent
+    if (this.registerRequest.password !== this.registerRequest.confirmPassword) {
+      this.errorMsg = ['Passwords do not match'];
+      return;
+    }
+
+    // Appel au service d'authentification pour l'enregistrement
     this.authService.register({ body: this.registerRequest })
       .subscribe({
         next: () => {
@@ -41,7 +54,10 @@ export class RegisterComponent {
           }
         }
       });
-}
+  }
 
-
+  // Méthode pour vérifier si les mots de passe correspondent
+  passwordsMatch(): boolean {
+    return this.registerRequest.password === this.registerRequest.confirmPassword;
+  }
 }

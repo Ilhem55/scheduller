@@ -1,15 +1,9 @@
 @import "bootstrap/dist/css/bootstrap.min.css";
 @import "@fortawesome/fontawesome-free/css/all.min.css";
 
-@import '../node_modules/@syncfusion/ej2-base/styles/material.css';
-@import '../node_modules/@syncfusion/ej2-buttons/styles/material.css';
-@import '../node_modules/@syncfusion/ej2-calendars/styles/material.css';
-@import '../node_modules/@syncfusion/ej2-dropdowns/styles/material.css';
-@import '../node_modules/@syncfusion/ej2-inputs/styles/material.css';
-@import '../node_modules/@syncfusion/ej2-lists/styles/material.css';
-@import '../node_modules/@syncfusion/ej2-popups/styles/material.css';
-@import '../node_modules/@syncfusion/ej2-navigations/styles/material.css';
-@import '../node_modules/@syncfusion/ej2-angular-schedule/styles/material.css';
+
+/* angular-cli file: src/styles.css */
+@import "../node_modules/angular-calendar/css/angular-calendar.css";
 
 
 .login-container {
@@ -19,4 +13,21 @@
   
   .cursor-pointer {
     cursor: pointer;
+  }
+
+
+  .quick-info-popup.e-schedule .e-quick-popup-wrapper .e-event-popup .e-popup-header {
+    background: #fff;
+  }
+  
+  .quick-info-popup.e-schedule .e-quick-popup-wrapper .e-event-popup .e-popup-header .e-header-icon-wrapper .e-close {
+    color: black;
+  }
+  
+  .quick-info-popup.e-schedule .e-quick-popup-wrapper .e-event-popup .e-popup-content {
+    padding: 8px 18px 8px 26px;
+  }
+  
+  .quick-info-popup.e-schedule .e-quick-popup-wrapper .e-event-popup .e-popup-footer {
+    display: block;
   }

@@ -22,6 +22,7 @@ constructor(
 }
 
 
+
 login() {
   this.errorMsg = [];
   console.log('Auth request:', this.authRequest); // Log the auth request
@@ -30,7 +31,7 @@ login() {
     next: (res) => {
       console.log('Auth response:', res); // Log the auth response
       this.tokenService.token = res.token as string;
-      this.router.navigate(['books']);
+      this.router.navigate(['scheduler']);
     },
     error: (err) => {
       console.error('Auth error:', err); // Log the error response

@@ -4,6 +4,6 @@ export interface Task {
   id?: number;
   title?: string;
   description?: string;
-  endDate?: string;
   startDate?: string;
+  endDate?: string;
 }
